@@ -6,6 +6,8 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
+const server = require('http').Server(app);
+
 app.use(express.json());
 app.use(require('./routes'));
 
@@ -17,4 +19,4 @@ mongoose.connect('mongodb+srv://elnino:Drop626311@cluster0-qwhiu.mongodb.net/qui
 
 
 
-app.listen(process.env.PORT || 3001);
+server.listen(process.env.PORT || 3001);
