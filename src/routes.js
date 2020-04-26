@@ -8,7 +8,7 @@ const UserController = require('./controllers/UserController');
 const TestController = require('./controllers/TestController');
 
 routes.get('/', (req, res) => {
-    res.send('Teste2');
+    res.send('Eng. de Software: Adolpho Cavalcanti');
 });
 
 //Questões
@@ -17,6 +17,7 @@ routes.get('/questions', QuestionController.show);
 
 //Opções
 routes.post('/questions/:id/options', OptionController.store);
+routes.get('/options', OptionController.show);
 
 //Usuário
 routes.post('/users', UserController.store);

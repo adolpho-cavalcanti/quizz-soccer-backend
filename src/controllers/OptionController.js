@@ -17,6 +17,10 @@ class OptionController{
 
         return res.json(option);
     }
+    async show(req, res) {
+        const option = await Option.find();
+        return res.json(option);
+    }
 }
 
 module.exports = new OptionController();
