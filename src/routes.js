@@ -13,7 +13,7 @@ routes.get('/', (req, res) => {
 
 //Questões
 routes.post('/questions', QuestionController.store);
-routes.get('/questions/:id', QuestionController.show);
+routes.get('/questions', QuestionController.show);
 
 //Opções
 routes.post('/questions/:id/options', OptionController.store);
